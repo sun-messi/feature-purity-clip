@@ -300,15 +300,26 @@ Investigate the importance of feature purity by pruning neurons based on their o
 
 > **Key Finding**: Retaining high-purity neurons (Min Sparse) outperforms random selection and low-purity neurons (Max Sparse) in downstream tasks.
 
-### Experiment 3: Misalignment Impact
+### Experiment 3: Misalignment Impact Study
 
-| Cs | Avg Abs Cos Sim | Accuracy Drop |
-|----|-----------------|---------------|
-| 0.0 | 0.12 | 0% |
-| 0.1 | 0.14 | -2% |
-| 0.3 | 0.17 | -5% |
-| 0.5 | 0.21 | -8% |
-| 0.8 | 0.26 | -12% |
+Study how image-text misalignment affects feature purity through controlled text shuffling.
+
+<p align="center">
+<table>
+  <tr>
+    <td align="center">
+      <img src="image/avg_abs_cos_sim_vs_cs.png" width="300px">
+      <br><strong>(g) Avg. Cos. Sim.</strong>
+    </td>
+    <td align="center">
+      <img src="image/vvt_distribution_cs.png" width="300px">
+      <br><strong>(h) Hist of Cos. Sim.</strong>
+    </td>
+  </tr>
+</table>
+</p>
+
+> **Key Finding**: When the misalignment probability ($C_m$) increases, neurons exhibit higher cosine similarity and reduced feature purity (orthogonality).
 
 ## 🎓 Citation
 

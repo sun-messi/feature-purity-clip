@@ -278,11 +278,11 @@ With 450 neurons retained:
 If you use this code in your research, please cite:
 
 ```bibtex
-@article{your2024feature,
-  title={Feature Purity in Vision-Language Models},
-  author={Your Name},
-  journal={arXiv preprint},
-  year={2024}
+@inproceedings{sun2025contrastive,
+  title={Contrastive Learning with Data Misalignment: Feature Purity, Training Dynamics and Theoretical Generalization Guarantees},
+  author={Sun, Jiawei and Zhang, Shuai and Li, Hongkang and Wang, Meng},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+  year={2025}
 }
 ```
 

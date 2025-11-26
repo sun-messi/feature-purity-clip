@@ -234,7 +234,7 @@ feature-purity-clip/
 
 ### Required Checkpoints
 
-Download pretrained models from [LaCLIP](https://github.com/LijieeFan/LaCLIP):
+Download pretrained models from [LaCLIP](https://github.com/LijieFan/LaCLIP):
 
 - **CC3M CLIP**: [Download](https://www.dropbox.com/s/5jsthdm85r2nfpz/cc3m_clip.pt?dl=0)
 - **CC3M LaCLIP**: [Download](https://www.dropbox.com/s/k2e1tgsfmo0afme/cc3m_laclip.pt?dl=0)

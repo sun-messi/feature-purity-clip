@@ -261,12 +261,44 @@ Comparison of CLIP and LaCLIP on Accuracy (%) and Silhouette Score (SS).
 | **LAION CLIP** | 85.5 | 0.116 | 93.0 | 0.181 | 91.2 | 0.258 | 71.7 | 0.078 | 90.1 | 0.122 | 97.3 | 0.223 |
 | **LAION LaCLIP** | **86.5** | **0.148** | **93.5** | **0.215** | **92.4** | **0.306** | **73.9** | **0.108** | **90.9** | **0.152** | **98.4** | **0.260** |
 
-### Experiment 2: Neuron Pruning
+### Experiment 2: Neuron Pruning Analysis
 
-With 450 neurons retained:
-- **Min Sparse (High Purity)**: ~42% accuracy
-- **Random**: ~40% accuracy
-- **Max Sparse (Low Purity)**: ~35% accuracy
+Investigate the importance of feature purity by pruning neurons based on their orthogonality.
+
+<p align="center">
+<table>
+  <tr>
+    <td align="center">
+      <img src="image/food101_accuracy_vs_sam.png" width="200px">
+      <br><strong>(a) Food-101 Acc.</strong>
+    </td>
+    <td align="center">
+      <img src="image/cifar10_accuracy_vs_sam.png" width="200px">
+      <br><strong>(b) CIFAR-10 Acc.</strong>
+    </td>
+    <td align="center">
+      <img src="image/caltech101_accuracy_vs_sam.png" width="200px">
+      <br><strong>(c) Caltech-101 Acc.</strong>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="image/food101_silhouette_vs_sam.png" width="200px">
+      <br><strong>(d) Food-101 SS</strong>
+    </td>
+    <td align="center">
+      <img src="image/cifar10_silhouette_vs_sam.png" width="200px">
+      <br><strong>(e) CIFAR-10 SS</strong>
+    </td>
+    <td align="center">
+      <img src="image/caltech101_silhouette_vs_sam.png" width="200px">
+      <br><strong>(f) Caltech-101 SS</strong>
+    </td>
+  </tr>
+</table>
+</p>
+
+> **Key Finding**: Retaining high-purity neurons (Min Sparse) outperforms random selection and low-purity neurons (Max Sparse) in downstream tasks.
 
 ### Experiment 3: Misalignment Impact
 
